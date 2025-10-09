@@ -1,0 +1,207 @@
+<?php include __DIR__.'/header.phtml'; ?>
+
+<main class="container-xl">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Mes infos</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Historique</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="voyage-tab" data-bs-toggle="tab" data-bs-target="#voyage-tab-pane" type="button" role="tab" aria-controls="voyage-tab-pane" aria-selected="false" >Saisir un covoiturage</button>
+        </li>
+    </ul>
+
+    <div class="tab-content my-2" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="row">
+            <aside class="col-sm-3 border border-3 border-success rounded m-2 bg-light-subtle pt-2">
+                <img src="img/Accueil_photo" alt="Photo">
+                <ul class="info-list">
+                    <li><span class="personalinfo">Nom et prenom</span> Tartempion </li>
+                    <li><span class="personalinfo">Téléphone</span> Tartempion </li>
+                    <li><span class="personalinfo">Ville</span> Tartempion </li>
+                    <li><span class="personalinfo">Adresse</span> Tartempion </li>
+                    <li><span class="personalinfo">Date de naissance</span> Tartempion </li>
+                </ul>
+            </aside>
+            <section class="col-sm-8 border border-3 border-success rounded m-2 bg-light-subtle pt-2">
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <h3>Pseudo :</h3> <p>Truc</p>
+                    </div>
+                    <div>
+                        <h3>Email :</h3> <p>Truc</p>
+                    </div>
+                </div>
+
+                <h3>Je suis :</h3>
+                <input type="radio" class="btn-check" name="options-base"  id="Passager"  checked>
+                <label class="btn" for="Passager">Passager</label>
+
+
+               
+                     <input type="radio" class="btn-check" name="options-base" id="Chauffeur" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                     <label class="btn" for="Chauffeur">Chauffeur</label>
+                
+               
+
+                 <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                       <form class="row g-3 inscripform" >
+                            <div class="col-md-6">
+                                <label for="inputplaque" class="form-label">Plaque d'immatricualtion</label>
+                                <input type="text" class="form-control" id="inputplaque">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="immadate" class="form-label">Date de première immatriculation</label>
+                                 <input type="date" id="immadate" name="immadate" class="form-control">
+                            </div>
+                            <div class="col-md-8">
+                                <label for="inputModele" class="form-label">Modèle de votre voiture</label>
+                                <input type="text" placeholder="C4 Cactus" class="form-control" id="inputModele" >
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="inputEnergie" class="form-label">Energie</label>
+                                <select id="inputEnergie" class="form-select">
+                                    <option selected>Choisissez...</option>
+                                    <option value="thermique">Thermique</option>
+                                    <option value="electrique">Electrique</option>
+                                    <option value="hybride">Hybride</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="inputColor" class="form-label">Couleur</label>
+                                <input type="text" placeholder="Magenta" class="form-control" id="inputColor">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputMarque" class="form-label">Marque</label>
+                                <select id="inputMarque" class="form-select">
+                                <option selected>Choisissez...</option>
+                                <option>Citroen</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputPlaces" class="form-label">Nombre de places</label>
+                                <input type="number" class="form-control" id="inputPlaces" min="1" max="10">
+                            </div>
+                            
+                            <div class="col-12 text-center">
+                                <h3>Préférence</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Fumeur friendly</h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="nosmoke" checked value="non1">
+                                    <label class="form-check-label" for="nosmoke">
+                                        non
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="yessmoke" value="oui1">
+                                    <label class="form-check-label" for="yessmoke">
+                                        oui
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h4>Animaux friendly</h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefau" id="noanimal" checked value="non2">
+                                    <label class="form-check-label" for="noanimal">
+                                        non
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefau" id="yesanimal" value="oui2">
+                                    <label class="form-check-label" for="yesanimal">
+                                        oui
+                                    </label>
+                                </div>
+                             
+                            </div>
+
+                            <div class="form-floating col-12">
+                            <textarea class="form-control" placeholder="D'autres préferences ?" id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Autres préferences</label>
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-outline-success">Ajouter un véhicule</button>
+                            </div>
+                       </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="voyage-tab-pane" role="tabpanel" aria-labelledby="voyage-tab" tabindex="0">
+              <form class="row g-3 w-75 m-auto">
+                            <div class="col-md-6">
+                                <label for="adressedepart" class="form-label">Adresse de depart</label>
+                                <input type="text" class="form-control" id="adressedepart">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="adressearrive" class="form-label">Adresse d'arrivée</label>
+                                <input type="text" placeholder="C4 Cactus" class="form-control" id="adressearrive" >
+                            </div>
+
+                            <div class="col-md-5">
+                                <label for="datedepart" class="form-label">Date et heure de depart</label>
+                                 <input type="datetime-local" id="datedepart" name="datedepart" class="form-control">
+                            </div>
+
+                            <div class="col-md-5">
+                                <label for="datearrive" class="form-label">Date et heure d'arrivée</label>
+                                 <input type="datetime-local" id="datearrive" name="datearrive" class="form-control">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="duree" class="form-label">Durée du voyage</label>
+                                 <input type="time" id="duree" name="duree" class="form-control">
+                            </div>
+                            
+
+                            <div class="col-md-4">
+                                <label for="Choixvoiture" class="form-label">Choix du vehicule</label>
+                                <select id="Choixvoiture" class="form-select">
+                                    <option selected>Choisissez...</option>
+                                    <option value="thermique">Voiture 1</option>
+
+                                </select>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label for="placedispo" class="form-label">Nombre de places</label>
+                                <input type="number" class="form-control" id="placedispo" min="1" max="10">
+                            </div>
+
+                             <div class="col-md-2">
+                                <label for="price" class="form-label">Prix (en credits)</label>
+                                <input type="number" class="form-control" id="price" min="3" max="200">
+                            </div>
+                            
+                            
+
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-outline-success">Creer un covoiturage</button>
+                            </div>
+                       </form>
+
+    </div>
+    </div>
+</main>
+
+<?php include __DIR__ . '/footer.phtml'; ?>

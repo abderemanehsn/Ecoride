@@ -1,0 +1,34 @@
+<?php include __DIR__.'/header.phtml'; ?>
+
+<main>
+    <section class=" conform mt-5"> 
+         <h1>Connectez vous</h1>
+    <form class="formUpIn inscripform" >
+    <div class="my-5">
+        <!-- <label for="Email" class="form-label">Votre Email</label> -->
+        <input type="email" class="form-control" placeholder="Email" id="Email" required>
+    </div>
+
+    <div class="my-5">
+        <!-- <label for="Password" class="form-label">Mot de passe</label> -->
+        <input type="password" name="password" class="form-control" placeholder="Mot de passe" id="Password" required>
+    </div>
+
+    <div class="my-5 form-check">
+        <input type="checkbox" class="form-check-input" id="Check1">
+        <label class="form-check-label" for="Check1">Rester conncté</label>
+    </div>
+    <div class=" my-3 text-center">
+        <button type="submit" class="btn btn-success">Connexion</button>
+    </div>
+    </form>
+
+    <div class="text-center mt-2">
+        <a href="inscriptions.php">Pas encore de compte ? Inscrivez vous</a>
+    </div>
+
+    </section>
+   
+</main>
+
+<?php include __DIR__ . '/footer.phtml'; ?>

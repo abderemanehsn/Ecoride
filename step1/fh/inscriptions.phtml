@@ -1,0 +1,86 @@
+<?php include __DIR__.'/header.phtml'; ?>
+
+<main>
+
+    <section class=" conform mt-5"> 
+        <h1>Bienvenue chez EchoRide</h1>
+        <form id="inscripform" class="formUpIn inscripform" >
+
+            <div class="row my-5">
+                <div class="col">
+                    <!-- <label for="prenom" class="form-label">Votre Prénom</label> -->
+                    <input type="text" id="prenom" class="form-control" placeholder="Prénom" aria-label="prénom" required>
+                </div>
+                <div class="col">
+                    <!-- <label for="nom" class="form-label">Votre Nom</label> -->
+                    <input type="text" id="nom" class="form-control" placeholder="Nom" aria-label="nom" required>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-sm-8">
+                    <label for="pseudo" class="form-label">Créer un pseudo</label>
+                    <input type="text" id="pseudo" class="form-control" placeholder="Pseudo" aria-label="pseudo" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="date" class="form-label">Date de naissance</label>
+                    <input type="date" id="birthday" class="form-control" placeholder="date de naissance" aria-label="birthday" required>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <!-- <label for="Email" class="form-label">Votre Email</label> -->
+                <input type="email" class="form-control" placeholder="Email" id="Email" required>
+            </div>
+
+            <div class="mb-5">
+                
+                <input type="text" class="form-control" placeholder="Adresse" id="adresse" required>
+            </div>
+
+            <div class="mb-5">
+                <!-- <label for="Telephone" class="form-label">Votre numero de telephone</label> -->
+                <input type="tel" class="form-control" placeholder="Numero de telephone" id="Telephone" aria-label="Numéro de telephone" required>
+            </div>
+
+        
+
+            <div class="row my-5">
+            <div class="col">
+                <!-- <label for="Password" class="form-label">Mot de passe</label> -->
+                <input type="password" name="password" class="form-control" placeholder="Mot de passe" id="password" required>
+                <div class="invalid-feedback" id="password-feedback">
+                </div>
+            </div>
+
+            <div class="col">
+                <!-- <label for="Password" class="form-label">Vérifier votre mot de passe</label> -->
+                <input type="password" name="confirmpassword" class="form-control" placeholder="Vérifier votre mot de passe" id="confirm_password" required>
+                 <div class="invalid-feedback" id="confirm_password-feedback">
+                 </div>
+            </div>
+
+            </div>
+        
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Check1" required>
+                <label class="form-check-label" for="Check1">En m'inscrivant à ce site, j'accepte les <a href="#" target="_blank">conditions générales d'utilisation</a></label>
+            </div>
+
+
+            <div class="text-center my-3">
+                <button type="submit" class="btn btn-success">Allons-y</button>
+            </div>
+            </form>
+
+            <div class="text-center mt-2">
+                <a href="connexion.php">Deja inscrit ? Connectez vous</a>
+            </div>
+
+    </section>
+
+
+</main>
+
+<?php include __DIR__ . '/footer.phtml'; ?>

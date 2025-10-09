@@ -1,0 +1,163 @@
+<?php include __DIR__.'/header.phtml'; ?>
+
+<main>
+
+<section class="searchbar w-75 mx-auto">
+
+
+    <form method="get">
+
+        <div class=" input-group row g-3 my-3 ">
+            <div class=" col input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-circle"></i></span>
+                <input type="text" class="form-control" placeholder="Départ" aria-label="Départ" aria-describedby="basic-addon1" required>
+            </div>
+
+            <div class="col input-group mb-3">
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-circle-fill"></i></span>
+                <input type="text" class="form-control" placeholder="Destination" aria-label="Destination" aria-describedby="basic-addon1" required>
+            </div>
+
+            <div class="col input-group mb-3">
+                <span class="input-group-text" id="basic-addon3"><i class="bi bi-calendar"></i></span>
+                <input type="date" id="trajet_date" name="search_trajet" class="form-control">
+            </div>
+
+             <div class="col input-group mb-3">
+                <span class="input-group-text" id="basic-addon4"><i class="bi bi-person-raised-hand"></i></span>
+                <input type="number" id="trajet_nombre" name="search_number" class="form-control" min="1" max="10" placeholder="1 passager">
+            </div>
+
+                <button class="col btn btn-success align-self-center m-0" type="button"> Rechercher </button>
+
+        </div>
+    </form>
+</section>
+
+<section class="covoiturages row w-75 mx-auto">
+    <aside  class="bg-light-subtle col-sm-3 border border-3 border-success rounded mx-2">
+        <section id="filtre">
+            <div class="aside-header">
+                <h3>Trier par</h3>
+                <button>Tout effacer</button>
+            </div>
+            <div class="energie">
+                <h4>Energie</h4>
+                 <ul class="list-unstyled">
+                    <li>
+                        <div>
+                            <input type="checkbox" id="electrique" name="electrique" value="electrique">
+                            <label for="electrique">Electrique</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div>
+                            <input type="checkbox" id="hybride" name="hybride" value="hybride">
+                            <label for="hybride">Hybride</label>
+                        </div>
+                    </li>
+                 </ul>
+            </div>
+                <hr>
+            <div class="note">
+                <h4>Note (minimale)</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <div class="form-check">
+                            <label class="form-check-label" for="Cinq">
+                                <input  class="form-check-input" type="radio" id="Cinq" name="note" value="5">
+                                Cinq
+                            </label>
+                         </div>
+                    </li>
+
+                     <li>
+                        <div class="form-check">
+                            <label class="form-check-label" for="Quatre">
+                                <input  class="form-check-input" type="radio" id="Quatre" name="note" value="4">
+                                Quatre
+                            </label>
+                         </div>
+                    </li>
+
+                     <li>
+                        <div class="form-check">
+                            <label class="form-check-label" for="Trois">
+                                <input  class="form-check-input" type="radio" id="Trois" name="note" value="3">
+                                trois
+                            </label>
+                         </div>
+                    </li>
+                 
+                </ul>
+            </div>
+
+            <div class="duree">
+                <label for="range1" class="form-label"><h4>Durée maximale du trajet (h)</h4></label>
+                <input type="range" class="form-range" min="1" max="15" value="10" id="range1">
+                <output for="range1" id="rangeValue" aria-hidden="true"></output>
+
+                <script>
+                
+                const rangeInput = document.getElementById('range1');
+                const rangeOutput = document.getElementById('rangeValue');
+
+                
+                rangeOutput.textContent = rangeInput.value;
+
+                rangeInput.addEventListener('input', function() {
+                    rangeOutput.textContent = this.value;
+                });
+                </script>
+            </div>
+
+
+            <div class="price">
+                <label for="range2" class="form-label"><h4>Prix maximal du trajet (credits) </h4></label>
+                <input type="range" class="form-range" min="4" max="50" value="50" id="range2">
+                <output for="range2" id="rangeValue2" aria-hidden="true"></output>
+
+                <script>
+                
+                const rangeInput2 = document.getElementById('range2');
+                const rangeOutput2 = document.getElementById('rangeValue2');
+
+                
+                rangeOutput2.textContent = rangeInput2.value;
+
+                rangeInput2.addEventListener('input', function() {
+                    rangeOutput2.textContent = this.value;
+                });
+                </script>
+            </div>
+
+            <hr>
+        </section>
+    </aside>
+    <div id="vue" class="col-sm-8">
+        <ul class="list-unstyled">
+            <li class=" bg-light-subtle border border-3 border-success rounded my-2 shadow">
+                <article class="p-2">
+
+                    <div class="d-flex justify-content-between">
+                       <p><strong>H de départ<i class="bi bi-dash-lg"></i>H d'arrivée</strong> <br> Durée du trajet</p>
+                       <p>A patir de <br> Euros</p> 
+                    </div>
+                    <hr>
+
+                    <div class="d-flex">
+                         <button class="btn btn-success px-2"><i class="bi bi-car-front"></i><i class="bi bi-leaf"></i></button>
+                         <p class="px-2">Pseudo  et photo</p> <p class="px-2">Note <i class="bi bi-star"></i></p>
+                         <a class="btn btn-outline-success ms-auto " href="detail.php" target="_blank">Details</a>
+                    </div>
+                </article>
+            </li>
+            <li>blablabla</li>
+            <li>blablabla</li>
+        </ul>
+    </div>
+</section>
+
+</main>
+
+<?php include __DIR__ . '/footer.phtml'; ?>

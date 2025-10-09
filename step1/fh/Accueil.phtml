@@ -1,0 +1,56 @@
+<?php include __DIR__.'/header.phtml'; ?>
+
+<main class="container-fluid pt-5">
+
+        <section class="searchbar w-75 mx-auto">
+            <form method="get">
+
+                <div class=" input-group row g-3 my-3 ">
+                    <div class=" col input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-circle"></i></span>
+                        <input type="text" class="form-control" placeholder="Départ" aria-label="Départ" aria-describedby="basic-addon1" required>
+                    </div>
+
+                    <div class="col input-group mb-3">
+                        <span class="input-group-text" id="basic-addon2"><i class="bi bi-circle-fill"></i></span>
+                        <input type="text" class="form-control" placeholder="Destination" aria-label="Destination" aria-describedby="basic-addon1" required>
+                    </div>
+
+                    <div class="col input-group mb-3">
+                        <span class="input-group-text" id="basic-addon3"><i class="bi bi-calendar"></i></span>
+                        <input type="date" id="trajet_date" name="search_trajet" class="form-control">
+                    </div>
+
+                    <div class="col input-group mb-3">
+                        <span class="input-group-text" id="basic-addon4"><i class="bi bi-person-raised-hand"></i></span>
+                        <input type="number" id="trajet_nombre" name="search_number" class="form-control" min="1" max="10" placeholder="1 passager">
+                    </div>
+
+                    <button class="col btn btn-success align-self-center m-0" type="button"> Rechercher </button>
+                </div>
+            </form>
+         </section>
+
+        <section class="row">
+            <div class="col-md-7 ps-4">
+                <!-- <h1 id="accueiltitle" class=" fs-1 fw-bold text-white">EcoRide</h1> -->
+                <div id="landingimg" >
+                    <img class="img-fluid img-thumbnail" src="img/Accueil_photo.png" alt=" montage de quatre photos d'un homme souriant au volant, d'une Citroen c4, d'un usager en pleine conduite ainsi que d'une peugeuot travesant une foret">
+                </div>
+
+            </div>
+            <article id="accueilart" class="col-md-5 text-center d">
+                <h2 class="fs-2 py-4">Ensemble, Réduisons Notre Empreinte, Kilomètre après Kilomètre !</h2>
+                <p Class="text-wrap lh-lg py-2">
+                Fatigué(e) de voir vos trajets quotidiens peser lourd sur la planète et votre portefeuille ? EcoRide est la nouvelle startup française qui transforme vos déplacements en actions concrètes pour l'environnement. Notre mission est simple : faire du covoiturage la norme pour les trajets en voiture, en vous offrant une solution à la fois écologique et économique. En choisissant EcoRide, vous ne faites pas que partager un trajet, vous rejoignez une communauté de voyageurs engagés qui réduisent ensemble les émissions de CO2. C'est l'opportunité de diviser par deux votre budget essence et de vous positionner comme un acteur du changement. L'avenir de la mobilité passe par des choix conscients, et avec notre plateforme web intuitive, conçue avec soin par notre équipe technique, rendre vos déplacements plus verts n'a jamais été aussi facile. 
+                </p>
+            </article>
+        </section>
+
+    <div class="text-center my-4">
+    <a href="trajet.php" class="btn btn-success btn-lg py-2 " role="button">Trouver un covoiturage</a>
+    </div>
+
+</main>
+
+<?php include __DIR__ . '/footer.phtml'; ?>
