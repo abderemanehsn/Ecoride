@@ -1,0 +1,39 @@
+<?php include __DIR__.'/header.phtml'; ?>
+
+<main>
+
+    <section class=" conform mt-5"> 
+
+        <h1>Nous contacter</h1>
+        <form class="formUpIn inscripform" action="mailto:EcoRide@gmail.com" method="post">
+
+            <div class="row my-5">
+                <div class="col">
+                    <input type="text" id="prenom" class="form-control" placeholder="Prénom" aria-label="prénom" required>
+                </div>
+                <div class="col">
+                    <input type="text" id="nom" class="form-control" placeholder="Nom (optionnel)" aria-label="nom">
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <input type="email" class="form-control" placeholder="Email" id="Email3" required>
+            </div>
+
+
+            <div class="mb-3">
+                <textarea class="form-control" placeholder="Entrez votre message" id="exampleFormControlTextarea1" rows="3" required></textarea>
+            </div>
+                        
+
+            <div class="text-center my-3">
+                <button type="submit" class="btn btn-success">Envoyer</button>
+            </div>
+        </form>
+
+
+    </section>
+
+</main>
+
+<?php include __DIR__ . '/footer.phtml'; ?>
